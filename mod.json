@@ -10,10 +10,10 @@
 	"id": "flingus.geometry_pride",
 	"name": "Geometry Pride",
 	"version": "v1.1.2",
-	"developer": "flingus",
-	"description": "geometry dash but WOEK",
+	"developer": "flingus, T1fyOwO",
+	"description": "geometry dash but with pride titles",
 	"links": {
-		"source": "https://github.com/flngus/woke"
+		"source": "https://github.com/T1fyOwO/Geometry-Pride-2.2081-Port/tree/main/"
 	},
 	"resources": {
 		"spritesheets": {
