@@ -1,15 +1,15 @@
 {
-	"geode": "4.4.0",
+	"geode": "5.10.1",
 	"gd": {
-		"win": "2.2074",
-		"mac": "2.2074",
-		"android": "2.2074",
-		"ios": "2.2074"
+		"win": "2.2081",
+		"mac": "2.2081",
+		"android": "2.2081",
+		"ios": "2.2081"
 	},
 	"early-load": true,
 	"id": "flingus.geometry_pride",
 	"name": "Geometry Pride",
-	"version": "v1.1.1",
+	"version": "v1.1.2",
 	"developer": "flingus",
 	"description": "geometry dash but WOEK",
 	"links": {
@@ -17,7 +17,7 @@
 	},
 	"resources": {
 		"spritesheets": {
-			"WokeSheet":[
+			"WokeSheet": [
 				"resources/PrideSheet/*.png"
 			]
 		}
@@ -25,10 +25,23 @@
 	"settings": {
 		"woke": {
 			"type": "string",
-			"name": "Woke Type",
+			"name": "Change Flag",
 			"description": "Changes which <cr>pride flag</c> is used for the <cg>logo</c>.",
 			"default": "Progress",
-			"one-of": [ "Lesbian", "Gay", "Bisexual", "Trans", "Non-Binary", "Intersex", "Asexual", "Pansexual", "Genderfluid", "Progress", "IntersexAccurate", "Aromantic" ]
+			"one-of": [
+				"Lesbian",
+				"Gay",
+				"Bisexual",
+				"Trans",
+				"Non-Binary",
+				"Intersex",
+				"Asexual",
+				"Pansexual",
+				"Genderfluid",
+				"Progress",
+				"IntersexAccurate",
+				"Aromantic"
+			]
 		}
 	}
 }
