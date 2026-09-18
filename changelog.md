@@ -1,3 +1,5 @@
+# 1.1.2
+- Ported to 2.2081 (By Me (T1fy >_<)
 # 1.1.1
 - Fix compatibility with High Graphics on Mobile
 # 1.1.0
