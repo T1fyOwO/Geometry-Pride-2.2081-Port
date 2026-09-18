@@ -74,4 +74,42 @@ class $modify(MyMenuLayer, MenuLayer) {
         auto btn = CCMenuItemSpriteExtra::create(
             logo,
             this,
-            menu
+            menu_selector(MyMenuLayer::openGeometryPrideSettings)
+        );
+
+        btn->m_scaleMultiplier = 1.075f;
+        btn->setID("woke-title"_spr);
+
+        auto menu = CCMenu::create();
+        menu->setID("woke-menu"_spr);
+        menu->addChild(btn);
+
+        btn->setPosition(pos);
+        menu->setPosition({0, 0});
+
+        this->addChild(menu);
+
+        return true;
+    }
+
+    void openGeometryPrideSettings(CCObject* sender) {
+        openSettingsPopup(Mod::get());
+    }
+};
+
+$on_mod(Loaded) {
+    geode::listenForSettingChanges<std::string>(
+        "woke",
+        [](std::string val) {
+            auto frame = updateSpriteCache(val);
+
+            if (auto ml = MenuLayer::get()) {
+                if (auto logo = typeinfo_cast<CCSprite*>(
+                    ml->getChildByIDRecursive("main-title")
+                )) {
+                    logo->setDisplayFrame(frame);
+                }
+            }
+        }
+    );
+}
